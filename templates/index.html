@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новошахтинский драматический театр - Солярис</title>
+    <style>
+        /* Общие стили */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('/static/uploads/space_bg.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        /* Стили для хедера */
+        header {
+            background-color: rgba(19, 17, 48, 0.9); /* Тёмно-серый с прозрачностью */
+            padding: 10px 15px;
+            text-align: center;
+        }
+
+        header a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+        }
+
+        header img {
+            height: 40px; /* Логотип */
+            margin-right: 10px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.2em; /* Размер текста в хэдере */
+        }
+
+        /* Стили заголовка */
+        .title {
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #c1c1c1;
+        }
+
+        .divider {
+            width: 50px;
+            height: 3px;
+            background-color: #c1c1c1;
+            margin: 10px auto;
+        }
+
+        /* Стили для текста описания */
+        .description, .video-section, .director, .music-section, .actors-section, footer {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(19, 17, 48, 0.9);
+            border-radius: 10px;
+            max-width: 800px;
+            font-size: 1.1em;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        /* Стили для видео */
+        .video-section video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Стили для текста "Постановка" */
+        .director {
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Стили для музыкальной секции */
+        .music-section h2 {
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .music-section audio {
+            width: 100%;
+            margin: 10px 0;
+            outline: none;
+        }
+
+        /* Стили для актеров */
+        .actors-section {
+            font-size: 1.1em;
+        }
+
+        .actors-section h3 {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .actors-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .actors-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .actors-section ul li span {
+            font-weight: bold;
+        }
+
+        /* Стили для футера */
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        .social-section h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .social-section .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .social-section .social-links img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .credits {
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #c1c1c1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Хэдер -->
+    <header>
+        <a href="https://www.nmdt.ru" target="_blank">
+            <img src="/static/uploads/logo.jpg" alt="Логотип театра">
+            <h1>Новошахтинский драматический театр</h1>
+        </a>
+    </header>
+
+    <!-- Основной контент -->
+    <div class="content">
+        <!-- Заголовок -->
+        <div class="title">Солярис</div>
+        <div class="subtitle">Жанр – Драма</div>
+        <div class="divider"></div>
+
+        <!-- Описание -->
+        <div class="description">
+            По мотивам одноимённого романа Станислава Лема и киносценарию Андрея Тарковского Новошахтинский драматический театр предлагает посмотреть Вам спектакль "Солярис", более известный всем, как научно-фантастический фильм.
+        </div>
+
+        <!-- Секция для видео -->
+        <div class="video-section">
+            <video controls>
+                <source src="/static/uploads/teaser.mp4" type="video/mp4">
+                Ваш браузер не поддерживает воспроизведение видео.
+            </video>
+        </div>
+
+        <!-- Постановка -->
+        <div class="director">
+            Постановка - главный режиссёр Сопов Михаил Юрьевич
+        </div>
+
+        <!-- Музыкальная секция -->
+        <div class="music-section">
+            <h2>Композитор: Иван Никулин</h2>
+            <audio controls>
+                <source src="/static/uploads/music/track1.mp3" type="audio/mpeg">
+                Ваш браузер не поддерживает воспроизведение аудио.
+            </audio>
+            <audio controls>
+                <source src="/static/uploads/music/track2.mp3" type="audio/mpeg">
+                Ваш браузер не поддерживает воспроизведение аудио.
+            </audio>
+            <audio controls>
+                <source src="/static/uploads/music/track3.mp3" type="audio/mpeg">
+                Ваш браузер не поддерживает воспроизведение аудио.
+            </audio>
+            <audio controls>
+                <source src="/static/uploads/music/track4.mp3" type="audio/mpeg">
+                Ваш браузер не поддерживает воспроизведение аудио.
+            </audio>
+            <audio controls>
+                <source src="/static/uploads/music/track5.mp3" type="audio/mpeg">
+                Ваш браузер не поддерживает воспроизведение аудио.
+            </audio>
+        </div>
+
+        <!-- Секция актеров -->
+        <div class="actors-section">
+            <h3>Роли исполняют</h3>
+            <ul>
+                <li><span>Крис:</span> Бирюков Роман Владимирович</li>
+                <li><span>Снаут:</span> Скулков Александр Владимирович</li>
+                <li><span>Сарториус:</span> Шарифулин Николай Григорьевич</li>
+                <li><span>Хари:</span> Хаустова Анастасия Сергеевна</li>
+                <li><span>Гибарян:</span> Лысенко Игорь Николаевич</li>
+                <li><span>Бертон:</span> Иванов Артем Сергеевич</li>
+                <li><span>Лютер (брат Криса):</span> Ковалев Сергей Сергеевич</li>
+                <li><span>Афроамериканка:</span> Казарова Кристина Рудольфовна</li>
+                <li><span>Дети Сарториуса, Ведущие телепередач:</span>
+                    Нестеров Дмитрий Викторович, <br>
+                    Шилова Александра Михайловна, <br>
+                    Богдан Александр Игоревич, <br>
+                    Пачко Екатерина Андреевна
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer>
+        <div class="social-section">
+            <h3>Мы в соц сетях</h3>
+            <div class="social-links">
+                <a href="https://vk.com/nmdteatre" target="_blank"><img src="/static/uploads/vk.png" alt="VK"></a>
+                <a href="https://t.me/dramteatr_nvsh" target="_blank"><img src="/static/uploads/tg.png" alt="TG"></a>
+                <a href="https://instagram.com/nmdt" target="_blank"><img src="/static/uploads/inst.jpg" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="credits">created by Arina Volkova</div>
+    </footer>
+</body>
+</html>
