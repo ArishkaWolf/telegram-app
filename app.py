@@ -15,7 +15,7 @@ app = Flask(__name__)
 application = Application.builder().token(TELEGRAM_TOKEN).build()
 
 # URL вашего веб-приложения
-WEB_APP_URL = "https://<ваш-домен>.vercel.app"
+WEB_APP_URL = "https://telegram-app-delta.vercel.app"
 
 # Обработчик корневого маршрута
 @app.route('/')
@@ -48,5 +48,6 @@ def webhook():
     application.update_queue.put(update)
     return 'OK'
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# Экспорт приложения для Vercel
+def handler(request):
+    return app(request)
