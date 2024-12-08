@@ -6,20 +6,26 @@ app.config['UPLOAD_FOLDER'] = 'static/uploads'
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    try:
+        return render_template('index.html')
+    except Exception as e:
+        return f"Error: {e}"
 
 @app.route('/upload', methods=['POST'])
 def upload():
-    if 'file' not in request.files:
-        return redirect(url_for('index'))
+    try:
+        if 'file' not in request.files:
+            return redirect(url_for('index'))
 
-    file = request.files['file']
-    if file.filename == '':
-        return redirect(url_for('index'))
+        file = request.files['file']
+        if file.filename == '':
+            return redirect(url_for('index'))
 
-    filepath = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
-    file.save(filepath)
-    return f"Файл загружен: <a href='/{filepath}'>{file.filename}</a>"
+        filepath = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
+        file.save(filepath)
+        return f"Файл загружен: <a href='/{filepath}'>{file.filename}</a>"
+    except Exception as e:
+        return f"Error: {e}"
 
 if __name__ == '__main__':
     app.run(debug=True)
