@@ -1,7 +1,7 @@
 import os
 from flask import Flask, request
 from telegram import Update, Bot
-from telegram.ext import Dispatcher, CommandHandler
+from telegram.ext import Dispatcher, CommandHandler, MessageHandler, Filters
 from dotenv import load_dotenv
 
 # Загрузка токена из .env файла
